@@ -39,24 +39,33 @@ public class Rabbit implements Runnable {
     public void run() {
         for (int index = 0; index < MILESTONES; index++) {
             switch (index) {
-                case 0 -> System.out.println("The Rabbit has started from the start line!");
-                case 1 -> System.out.println("The Rabbit has reached the Cool River!");
-                case 2 -> System.out.println("The Rabbit has reached the Mountain Hill!");
+                case 0 -> {
+                    System.out.println("The Rabbit has started from the start line!");
+                    timeTakenByRabbitToCompleteTheRace = timeTakenByRabbitToCompleteTheRace + 1.5f;
+                }
+                case 1 -> {
+                    System.out.println("The Rabbit has reached the Cool River!");
+                    timeTakenByRabbitToCompleteTheRace = timeTakenByRabbitToCompleteTheRace + 1.5f;
+                }
+                case 2 -> {
+                    System.out.println("The Rabbit has reached the Mountain Hill!");
+                    timeTakenByRabbitToCompleteTheRace = timeTakenByRabbitToCompleteTheRace + 1.5f;
+                }
                 case 3 -> {
                     System.out.println("The Rabbit has reached the Big Oak Tree!");
                     System.out.println("The Rabbit is leading and hence is going to sleep!");
+                    timeTakenByRabbitToCompleteTheRace = timeTakenByRabbitToCompleteTheRace + 1.5f;
                     try {
                         Thread.sleep(9000L);
-                        timeTakenByRabbitToCompleteTheRace = timeTakenByRabbitToCompleteTheRace + 9f;
                     } catch (InterruptedException e) {
                         System.err.println("The Rabbit's sleep got interrupted!");
                     }
+                    timeTakenByRabbitToCompleteTheRace = timeTakenByRabbitToCompleteTheRace + 9f;
                 }
                 case 4 -> System.out.println("The Rabbit has reached the finish line!");
             }
             try {
                 Thread.sleep(1500L);
-                timeTakenByRabbitToCompleteTheRace = timeTakenByRabbitToCompleteTheRace + 1.5f;
 
             } catch (InterruptedException e) {
                 System.err.println("The rabbit has lost the path!");

@@ -37,15 +37,26 @@ public class Tortoise extends Thread {
     public void run() {
         for (int index = 0; index < MILESTONES; index++) {
             switch (index) {
-                case 0 -> System.out.println("The Tortoise has started from the start line!");
-                case 1 -> System.out.println("The Tortoise has reached the Cool River!");
-                case 2 -> System.out.println("The Tortoise has reached the Mountain Hill!");
-                case 3 -> System.out.println("The Tortoise has reached the Big Oak Tree!");
+                case 0 -> {
+                    System.out.println("The Tortoise has started from the start line!");
+                    timeTakenByTortoiseToCompleteTheRace = timeTakenByTortoiseToCompleteTheRace + 3f;
+                }
+                case 1 -> {
+                    System.out.println("The Tortoise has reached the Cool River!");
+                    timeTakenByTortoiseToCompleteTheRace = timeTakenByTortoiseToCompleteTheRace + 3f;
+                }
+                case 2 -> {
+                    System.out.println("The Tortoise has reached the Mountain Hill!");
+                    timeTakenByTortoiseToCompleteTheRace = timeTakenByTortoiseToCompleteTheRace + 3f;
+                }
+                case 3 -> {
+                    System.out.println("The Tortoise has reached the Big Oak Tree!");
+                    timeTakenByTortoiseToCompleteTheRace = timeTakenByTortoiseToCompleteTheRace + 3f;
+                }
                 case 4 -> System.out.println("The Tortoise has reached the finish line!");
             }
             try {
                 Thread.sleep(3000L);
-                timeTakenByTortoiseToCompleteTheRace = timeTakenByTortoiseToCompleteTheRace + 3f;
 
             } catch (InterruptedException e) {
                 System.err.println("The Tortoise has lost the path!");
