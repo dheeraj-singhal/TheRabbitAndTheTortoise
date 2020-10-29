@@ -13,10 +13,20 @@ public class Rabbit implements Runnable {
         this.rabbit = new Thread(this, "Rabbit");
     }
 
+    /**
+     * This method return the time taken by rabbit to finish his race.
+     *
+     * @return time taken by rabbit to complete the race
+     */
     public float getTimeTakenByRabbitToCompleteTheRace() {
         return timeTakenByRabbitToCompleteTheRace;
     }
 
+    /**
+     * This method sets the value of time taken by rabbit to finish his race
+     *
+     * @param timeTakenByRabbit time taken by rabbit to complete the race
+     */
     public void setTimeTakenByRabbitToCompleteTheRace(float timeTakenByRabbit) {
         Rabbit.timeTakenByRabbitToCompleteTheRace = timeTakenByRabbit;
     }
