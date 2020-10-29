@@ -5,6 +5,7 @@ import javax.swing.*;
 public class Rabbit implements Runnable {
 
     private static final int MILESTONES = 5;
+    private static final float timeTakenToCompleteTheRace = 0f;
 
     private final Thread rabbit;
 
