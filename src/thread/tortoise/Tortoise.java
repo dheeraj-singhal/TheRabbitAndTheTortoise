@@ -7,8 +7,8 @@ public class Tortoise extends Thread {
     private final Thread tortoise;
     private float timeTakenByTortoiseToCompleteTheRace = 0f;
 
-    public Tortoise(Thread tortoise) {
-        this.tortoise = tortoise;
+    public Tortoise() {
+        this.tortoise = new Thread(this, "Tortoise");
     }
 
     /**
