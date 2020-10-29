@@ -5,7 +5,7 @@ import javax.swing.*;
 public class Rabbit implements Runnable {
 
     private static final int MILESTONES = 5;
-    private static final float timeTakenToCompleteTheRace = 0f;
+    private static final float timeTakenByRabbitToCompleteTheRace = 0f;
 
     private final Thread rabbit;
 
@@ -15,6 +15,10 @@ public class Rabbit implements Runnable {
 
     public Thread getRabbit() {
         return rabbit;
+    }
+
+    public static float getTimeTakenByRabbitToCompleteTheRace() {
+        return timeTakenByRabbitToCompleteTheRace;
     }
 
     @Override
