@@ -5,7 +5,7 @@ import javax.swing.*;
 public class Rabbit implements Runnable {
 
     private static final int MILESTONES = 5;
-    private static final float timeTakenByRabbitToCompleteTheRace = 0f;
+    private static float timeTakenByRabbitToCompleteTheRace = 0f;
 
     private final Thread rabbit;
 
@@ -13,12 +13,16 @@ public class Rabbit implements Runnable {
         this.rabbit = new Thread(this, "Rabbit");
     }
 
-    public Thread getRabbit() {
-        return rabbit;
+    public float getTimeTakenByRabbitToCompleteTheRace() {
+        return timeTakenByRabbitToCompleteTheRace;
     }
 
-    public static float getTimeTakenByRabbitToCompleteTheRace() {
-        return timeTakenByRabbitToCompleteTheRace;
+    public void setTimeTakenByRabbitToCompleteTheRace(float timeTakenByRabbit) {
+        Rabbit.timeTakenByRabbitToCompleteTheRace = timeTakenByRabbit;
+    }
+
+    public Thread getRabbit() {
+        return rabbit;
     }
 
     @Override
@@ -39,6 +43,7 @@ public class Rabbit implements Runnable {
                     System.out.println("The Rabbit is leading and hence is going to sleep!");
                     try {
                         Thread.sleep(9000L);
+                        timeTakenByRabbitToCompleteTheRace = timeTakenByRabbitToCompleteTheRace + 9f;
                     } catch (InterruptedException e) {
                         System.err.println("The Rabbit's sleep got interrupted!");
                     }
@@ -49,6 +54,8 @@ public class Rabbit implements Runnable {
             }
             try {
                 Thread.sleep(1500L);
+                timeTakenByRabbitToCompleteTheRace = timeTakenByRabbitToCompleteTheRace + 1.5f;
+
             } catch (InterruptedException e) {
                 System.err.println("The rabbit has lost the path!");
             }
