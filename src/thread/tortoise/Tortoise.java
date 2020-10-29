@@ -26,4 +26,8 @@ public class Tortoise extends Thread {
     public void setTimeTakenByTortoiseToCompleteTheRace(float timeTakenByTortoise) {
         this.timeTakenByTortoiseToCompleteTheRace = timeTakenByTortoise;
     }
+
+    public Thread getTortoise() {
+        return tortoise;
+    }
 }
