@@ -1,6 +1,6 @@
 package thread.tortoise;
 
 public class Tortoise extends Thread {
-    public static final int MILESTONE = 5;
-
+    private static final int MILESTONE = 5;
+    private float timeTakenByTortoiseToCompleteTheRace;
 }
